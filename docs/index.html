@@ -1,0 +1,1341 @@
+<!DOCTYPE html>
+
+<html>
+
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="canonical" href="https://www.hexstreamsoft.com/libraries/inheriting-readers/" />
+    <meta name="author" content="Jean-Philippe Paradis" />
+    <link rel="author" href="https://abc.hexstream.xyz/" />
+    <link rel="license" href="https://www.hexstreamsoft.com/UNLICENSE" />
+    <meta name="description" content="Provides a simple yet powerful value inheritance scheme." />
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>inheriting-readers | Libraries | HexstreamSoft</title>
+    <link href="https://www.hexstreamsoft.com/css/global.css" rel="stylesheet" type="text/css" />
+    <link href="https://www.hexstreamsoft.com/libraries/libraries.css" rel="stylesheet" type="text/css" />
+    <link href="https://global.hexstreamsoft.com/css/cl-definitions.css" rel="stylesheet" type="text/css" />
+    <script src="https://global.hexstreamsoft.com/scripts/global.js"></script>
+    <script src="https://www.hexstreamsoft.com/scripts/global.js"></script>
+    <script src="https://www.hexstreamsoft.com/libraries/libraries.js" defer></script>
+  </head>
+
+  <body>
+
+    <nav id="top-nav">
+
+      <div class="main">
+
+        <div class="breadcrumbs">
+          <a href="https://www.hexstreamsoft.com/">HexstreamSoft</a>
+          <span class="crumb"><span class="s"> » </span><a href="https://www.hexstreamsoft.com/libraries/">Libraries</a></span>
+          <span class="crumb"><span class="s"> » </span><a class="here">inheriting-readers</a></span>
+        </div>
+
+        <nav class="tabs" id="meta-nav">
+          <ul>
+            <li><a class="github" href="https://github.com/Hexstream/inheriting-readers"><span>See on GitHub</span></a></li>
+          </ul>
+        </nav>
+
+      </div>
+
+      <p id="last-updated"><span>This page was last updated on </span><time datetime="2021-01-17">17 january 2021</time><span>.</span></p>
+
+    </nav>
+
+    <main>
+
+      <header id="page-header">
+        <h1>inheriting-readers</h1>
+      </header>
+
+      <div class="tags contains-groups">
+        <div class="group prominent">
+          <span class="tag hv license">
+            <span class="h">License<span>:</span></span>
+            <span class="v">Public Domain</span>
+          </span>
+          <span class="s">, </span>
+          <span class="tag hv quicklisp">
+            <span class="h">Load it with Quicklisp<span>:</span></span>
+            <code class="v">(ql:quickload "inheriting-readers")</code>
+          </span>
+        </div>
+        <div class="group">
+          <span class="tag hv">
+            <span class="h">Library type<span>:</span></span>
+            <span class="v">Protocol</span>
+          </span>
+          <span class="s">, </span>
+          <span class="tag hv">
+            <span class="h">Project complexity<span>:</span></span>
+            <span class="v">Medium</span>
+          </span>
+        </div>
+      </div>
+
+      <nav class="tabs" id="further-info">
+        <ul>
+          <li><a href="https://www.hexstreamsoft.com/libraries/releases/latest-versions/#inheriting-readers">Latest release</a></li>
+          <li><a href="https://www.hexstreamsoft.com/libraries/dependencies/#inheriting-readers">Dependencies</a></li>
+        </ul>
+        <ul>
+          <li><a href="https://www.hexstreamsoft.com/libraries/external-pages-xref/#inheriting-readers">External library pages</a></li>
+        </ul>
+      </nav>
+
+      <section id="introduction">
+
+        <p><dfn><code class="relevant">inheriting-readers</code></dfn> provides a simple yet powerful value inheritance scheme.</p>
+
+      </section>
+
+      <nav class="tabs">
+        <ul>
+          <li><a href="#overview">Overview</a></li>
+          <li><a href="#dictionary">Dictionary</a></li>
+        </ul>
+      </nav>
+
+      <section id="overview">
+
+        <h1 class="breadcrumbs-bar">
+          <span class="section-relative-nav">
+            <a href="#overview" class="anchor">⚓</a>
+          </span>
+          <span class="breadcrumbs">
+            <a class="here">Overview</a>
+          </span>
+        </h1>
+
+        <p>Sorry for the incomplete documentation. See note on Libraries page.</p>
+
+      </section>
+
+      <section id="dictionary">
+
+        <h1 class="breadcrumbs-bar">
+          <span class="section-relative-nav">
+            <a href="#dictionary" class="anchor">⚓</a>
+          </span>
+          <span class="breadcrumbs">
+            <a class="here">Dictionary</a>
+          </span>
+        </h1>
+
+        <nav class="tabs">
+          <ul>
+            <li><a href="#dictionary_inheriting-readers"><span class="type">Package</span> <code>inheriting-readers</code></a></li>
+            <li><a href="#dictionary_classes">Classes</a></li>
+            <li><a href="#dictionary_inheritance-schemes">Inheritance schemes</a></li>
+          </ul>
+        </nav>
+
+        <section id="dictionary_inheriting-readers">
+
+          <h1 class="breadcrumbs-bar">
+            <span class="section-relative-nav">
+              <a href="#dictionary_inheriting-readers" class="anchor">⚓</a>
+            </span>
+            <span class="breadcrumbs">
+              <a href="#dictionary">Dictionary</a>
+              <span class="crumb"><span class="s"> » </span><a class="here">inheriting-readers</a></span>
+            </span>
+          </h1>
+
+          <article class="package definition">
+
+            <h1><span class="type">Package</span> <span class="name self">inheriting-readers</span></h1>
+
+            <section class="description">
+              <h1>Description</h1>
+              <p>All symbols from this package should normally be explicitly qualified, such as <code class="relevant"><a href="#dictionary_standard-class">inheriting-readers:standard-class</a></code>.<br />Don't <code>(:use)</code>!</p>
+            </section>
+
+          </article>
+
+        </section>
+
+        <section id="dictionary_classes">
+
+          <h1 class="breadcrumbs-bar">
+            <span class="section-relative-nav">
+              <a href="#dictionary_classes" class="anchor">⚓</a>
+            </span>
+            <span class="breadcrumbs">
+              <a href="#dictionary">Dictionary</a>
+              <span class="crumb"><span class="s"> » </span><a class="here">Classes</a></span>
+            </span>
+          </h1>
+
+          <nav class="tabs">
+            <ul>
+              <li><a href="#dictionary_standard-metaclass"><span class="type">Class</span> <code>standard-metaclass</code></a></li>
+              <li><a href="#dictionary_class"><span class="type">Class</span> <code>class</code></a></li>
+              <li><a href="#dictionary_standard-class"><span class="type">Class</span> <code>standard-class</code></a></li>
+            </ul>
+            <ul>
+              <li><a href="#dictionary_direct-slot"><span class="type">Class</span> <code>direct-slot</code></a></li>
+              <li><a href="#dictionary_standard-direct-slot"><span class="type">Class</span> <code>standard-direct-slot</code></a></li>
+              <li><a href="#dictionary_expand-inherit-slot-option"><span class="type">Generic function</span> <code>expand-inherit-slot-option</code></a></li>
+            </ul>
+            <ul>
+              <li><a href="#dictionary_inherit-mixin"><span class="type">Class</span> <code>inherit-mixin</code></a></li>
+              <li><a href="#dictionary_inherit"><span class="type">Generic function</span> <code>inherit</code></a></li>
+              <li><a href="#dictionary_inherit-class-option-mixin"><span class="type">Class</span> <code>inherit-class-option-mixin</code></a></li>
+            </ul>
+            <ul>
+              <li><a href="#dictionary_reader-method"><span class="type">Class</span> <code>reader-method</code></a></li>
+              <li><a href="#dictionary_standard-reader-method"><span class="type">Class</span> <code>standard-reader-method</code></a></li>
+              <li><a href="#dictionary_compute-inheriting-method-initargs-overrides"><span class="type">Generic function</span> <code>compute-inheriting-method-initargs-overrides</code></a></li>
+            </ul>
+          </nav>
+
+          <section id="dictionary_standard-metaclass">
+
+            <h1 class="breadcrumbs-bar">
+              <span class="section-relative-nav">
+                <a href="#dictionary_standard-metaclass" class="anchor">⚓</a>
+              </span>
+              <span class="breadcrumbs">
+                <a href="#dictionary">Dictionary</a>
+                <span class="crumb"><span class="s"> » </span><a href="#dictionary_classes">Classes</a></span>
+                <span class="crumb"><span class="s"> » </span><a class="here">standard-metaclass</a></span>
+              </span>
+            </h1>
+
+            <article class="class definition">
+
+              <h1><span class="type">Class</span> <span class="name self">inheriting-readers:standard-metaclass</span></h1>
+
+              <p class="direct-superclasses"><code class="relevant"><a href="#dictionary_inheritance-schemes-mixin">inheriting-readers:inheritance-schemes-mixin</a></code>, <a href="https://www.hexstreamsoft.com/libraries/compatible-metaclasses/#dictionary_standard-class" target="_blank">compatible-metaclasses:standard-class</a>, <a href="https://www.hexstreamsoft.com/libraries/compatible-metaclasses/#dictionary_standard-metaclass" target="_blank">compatible-metaclasses:standard-metaclass</a></p>
+
+              <p class="metaclass"><b>Metaclass:</b> <a href="https://www.hexstreamsoft.com/libraries/compatible-metaclasses/#dictionary_standard-metaclass" target="_blank">compatible-metaclasses:standard-metaclass</a></p>
+
+              <section class="description">
+                <h1>Description</h1>
+                <p>TBW.</p>
+              </section>
+
+            </article>
+
+          </section>
+
+          <section id="dictionary_class">
+
+            <h1 class="breadcrumbs-bar">
+              <span class="section-relative-nav">
+                <a href="#dictionary_class" class="anchor">⚓</a>
+              </span>
+              <span class="breadcrumbs">
+                <a href="#dictionary">Dictionary</a>
+                <span class="crumb"><span class="s"> » </span><a href="#dictionary_classes">Classes</a></span>
+                <span class="crumb"><span class="s"> » </span><a class="here">class</a></span>
+              </span>
+            </h1>
+
+            <article class="class definition">
+
+              <h1><span class="type">Class</span> <span class="name self">inheriting-readers:class</span></h1>
+
+              <p class="direct-superclasses"><a href="http://www.lispworks.com/documentation/HyperSpec/Body/t_std_cl.htm" target="_blank">cl:standard-class</a></p>
+
+              <section class="description">
+                <h1>Description</h1>
+                <p>TBW.</p>
+              </section>
+
+            </article>
+
+          </section>
+
+          <section id="dictionary_standard-class">
+
+            <h1 class="breadcrumbs-bar">
+              <span class="section-relative-nav">
+                <a href="#dictionary_standard-class" class="anchor">⚓</a>
+              </span>
+              <span class="breadcrumbs">
+                <a href="#dictionary">Dictionary</a>
+                <span class="crumb"><span class="s"> » </span><a href="#dictionary_classes">Classes</a></span>
+                <span class="crumb"><span class="s"> » </span><a class="here">standard-class</a></span>
+              </span>
+            </h1>
+
+            <article class="class definition">
+
+              <h1><span class="type">Class</span> <span class="name self">inheriting-readers:standard-class</span></h1>
+
+              <p class="direct-superclasses"><code class="relevant"><a href="#dictionary_inheritance-schemes-mixin">inheriting-readers:inheritance-schemes-mixin</a></code>, <code class="relevant"><a href="#dictionary_inherit-class-option-mixin">inheriting-readers:inherit-class-option-mixin</a></code>, <a href="https://www.hexstreamsoft.com/libraries/class-options/#dictionary_class-mixin" target="_blank">class-options:class-mixin</a>, <a href="https://www.hexstreamsoft.com/libraries/compatible-metaclasses/#dictionary_standard-class" target="_blank">compatible-metaclasses:standard-class</a></p>
+
+              <p class="metaclass"><b>Metaclass:</b> <a href="#dictionary_standard-metaclass">inheriting-readers:standard-metaclass</a></p>
+
+              <p><b>Class options:</b> <code>(:inheritance-schemes t (:parent-function #'inheriting-readers:parent))</code></p>
+
+              <section class="description">
+                <h1>Description</h1>
+                <p>TBW.</p>
+              </section>
+
+            </article>
+
+            <article class="method definition" id="dictionary_direct-slot-definition-class_standard-class">
+
+              <h1><span class="type">Method</span> <span class="name self">c2mop:direct-slot-definition-class</span></h1>
+
+              <p class="args-and-retvals">(<var>class</var> <code class="specializer relevant"><a href="#dictionary_standard-class">inheriting-readers:standard-class</a></code>) <var>slot-names</var> &amp;key <var>inherit</var> =&gt; <var>slot-definition-class</var></p>
+
+              <section class="description">
+                <h1>Description</h1>
+                <p>If <var>inherit</var> is not <code>nil</code>, return the class <code class="relevant"><a href="#dictionary_standard-direct-slot">inheriting-readers:standard-direct-slot</a></code>, else call the next method.</p>
+              </section>
+
+            </article>
+
+            <article class="method definition" id="dictionary_reader-method-class_standard-class_direct-slot">
+
+              <h1><span class="type">Method</span> <span class="name self">c2mop:reader-method-class</span></h1>
+
+              <p class="args-and-retvals">(<var>class</var> <code class="specializer relevant"><a href="#dictionary_standard-class">inheriting-readers:standard-class</a></code>) (<var>class</var> <code class="specializer relevant"><a href="#dictionary_direct-slot">inheriting-readers:direct-slot</a></code>)  &amp;key &amp;allow-other-keys =&gt; <var>reader-method-class</var></p>
+
+              <section class="description">
+                <h1>Description</h1>
+                <p>Returns the class <code class="relevant"><a href="#dictionary_standard-reader-method">inheriting-readers:standard-reader-method</a></code>.</p>
+              </section>
+
+            </article>
+
+          </section>
+
+          <section id="dictionary_direct-slot">
+
+            <h1 class="breadcrumbs-bar">
+              <span class="section-relative-nav">
+                <a href="#dictionary_direct-slot" class="anchor">⚓</a>
+              </span>
+              <span class="breadcrumbs">
+                <a href="#dictionary">Dictionary</a>
+                <span class="crumb"><span class="s"> » </span><a href="#dictionary_classes">Classes</a></span>
+                <span class="crumb"><span class="s"> » </span><a class="here">direct-slot</a></span>
+              </span>
+            </h1>
+
+            <article class="class definition">
+
+              <h1><span class="type">Class</span> <span class="name self">inheriting-readers:direct-slot</span></h1>
+
+              <p class="direct-superclasses"><a href="https://clos-mop.hexstreamsoft.com/classes/#standard-direct-slot-definition" target="_blank">c2mop:standard-direct-slot-definition</a></p>
+
+              <section class="description">
+                <h1>Description</h1>
+                <p>TBW.</p>
+              </section>
+
+            </article>
+
+          </section>
+
+          <section id="dictionary_standard-direct-slot">
+
+            <h1 class="breadcrumbs-bar">
+              <span class="section-relative-nav">
+                <a href="#dictionary_standard-direct-slot" class="anchor">⚓</a>
+              </span>
+              <span class="breadcrumbs">
+                <a href="#dictionary">Dictionary</a>
+                <span class="crumb"><span class="s"> » </span><a href="#dictionary_classes">Classes</a></span>
+                <span class="crumb"><span class="s"> » </span><a class="here">standard-direct-slot</a></span>
+              </span>
+            </h1>
+
+            <article class="class definition">
+
+              <h1><span class="type">Class</span> <span class="name self">inheriting-readers:standard-direct-slot</span></h1>
+
+              <p class="direct-superclasses"><code class="relevant"><a href="#dictionary_inherit-mixin">inheriting-readers:inherit-mixin</a></code>, <code class="relevant"><a href="#dictionary_inheritance-scheme-mixin">inheriting-readers:inheritance-scheme-mixin</a></code>, <code class="relevant"><a href="#dictionary_direct-slot">inheriting-readers:direct-slot</a></code></p>
+
+              <section class="description">
+                <h1>Description</h1>
+                <p>TBW.</p>
+              </section>
+
+            </article>
+
+            <article class="method definition" id="dictionary_initialize-instance_around_standard-direct-slot">
+
+              <h1><span class="type">Around-Method</span> <span class="name self">initialize-instance</span></h1>
+
+              <p class="args-and-retvals">(<var>slot</var> <code class="specializer relevant"><a href="#dictionary_standard-direct-slot">inheriting-readers:standard-direct-slot</a></code>) &amp;key <var>instance</var></p>
+
+              <section class="description">
+                <h1>Description</h1>
+                <p>TBW.</p>
+              </section>
+
+            </article>
+
+          </section>
+
+          <section id="dictionary_expand-inherit-slot-option">
+
+            <h1 class="breadcrumbs-bar">
+              <span class="section-relative-nav">
+                <a href="#dictionary_expand-inherit-slot-option" class="anchor">⚓</a>
+              </span>
+              <span class="breadcrumbs">
+                <a href="#dictionary">Dictionary</a>
+                <span class="crumb"><span class="s"> » </span><a href="#dictionary_classes">Classes</a></span>
+                <span class="crumb"><span class="s"> » </span><a class="here">expand-inherit-slot-option</a></span>
+              </span>
+            </h1>
+
+            <article class="generic-function definition">
+
+              <h1><span class="type">Generic Function</span> <span class="name self">inheriting-readers:expand-inherit-slot-option</span></h1>
+
+              <p class="args-and-retvals"><var>direct-slot</var> &amp;rest <var>initargs</var> &amp;key &amp;allow-other-keys =&gt; <var>initargs-overrides</var></p>
+
+              <section class="arguments-and-values">
+                <h1>Arguments and Values</h1>
+                <ul>
+                  <li><var>direct-slot</var> -- A direct slot.</li>
+                  <li><var>initargs</var> -- A plist.</li>
+                  <li><var>initargs-overrides</var> -- A fresh plist.</li>
+                </ul>
+              </section>
+
+              <section class="description">
+                <h1>Description</h1>
+                <p>TBW.</p>
+              </section>
+
+              <section class="methods">
+                <h1>Methods</h1>
+
+                <article class="method definition" id="dictionary_expand-inherit-slot-option_standard-direct-slot">
+
+                  <h1><span class="type">Method</span> <span class="name self">inheriting-readers:expand-inherit-slot-option</span></h1>
+
+                  <p class="args-and-retvals">(<var>slot</var> <code class="specializer relevant"><a href="#dictionary_standard-direct-slot">inheriting-readers:standard-direct-slot</a></code>) &amp;key <var>inherit</var> <var>inheritance-scheme</var> =&gt; <var>initargs-overrides</var></p>
+
+                  <section class="description">
+                    <h1>Description</h1>
+                    <p>TBW.</p>
+                  </section>
+
+                </article>
+
+              </section>
+
+            </article>
+
+          </section>
+
+          <section id="dictionary_inherit-mixin">
+
+            <h1 class="breadcrumbs-bar">
+              <span class="section-relative-nav">
+                <a href="#dictionary_inherit-mixin" class="anchor">⚓</a>
+              </span>
+              <span class="breadcrumbs">
+                <a href="#dictionary">Dictionary</a>
+                <span class="crumb"><span class="s"> » </span><a href="#dictionary_classes">Classes</a></span>
+                <span class="crumb"><span class="s"> » </span><a class="here">inherit-mixin</a></span>
+              </span>
+            </h1>
+
+            <article class="class definition">
+
+              <h1><span class="type">Class</span> <span class="name self">inheriting-readers:inherit-mixin</span></h1>
+
+              <section class="description">
+                <h1>Description</h1>
+                <p>Slots:</p>
+                <pre><code>((<var>inherit</var> :initarg :inherit
+          :reader <code class="relevant"><a href="#dictionary_inherit">inheriting-readers:inherit</a></code>
+          :initform nil))</code></pre>
+              </section>
+
+            </article>
+
+          </section>
+
+          <section id="dictionary_inherit">
+
+            <h1 class="breadcrumbs-bar">
+              <span class="section-relative-nav">
+                <a href="#dictionary_inherit" class="anchor">⚓</a>
+              </span>
+              <span class="breadcrumbs">
+                <a href="#dictionary">Dictionary</a>
+                <span class="crumb"><span class="s"> » </span><a href="#dictionary_classes">Classes</a></span>
+                <span class="crumb"><span class="s"> » </span><a class="here">inherit</a></span>
+              </span>
+            </h1>
+
+            <article class="generic-function reader definition">
+
+              <h1><span class="type">Generic Function</span> <span class="name self">inheriting-readers:inherit</span></h1>
+
+              <p class="args-and-retvals"><var>object</var> =&gt; <var>inheritance-specification</var></p>
+
+              <section class="description">
+                <h1>Description</h1>
+                <p>Returns the <var>inheritance-specification</var> associated with the object.</p>
+              </section>
+
+            </article>
+
+          </section>
+
+          <section id="dictionary_inherit-class-option-mixin">
+
+            <h1 class="breadcrumbs-bar">
+              <span class="section-relative-nav">
+                <a href="#dictionary_inherit-class-option-mixin" class="anchor">⚓</a>
+              </span>
+              <span class="breadcrumbs">
+                <a href="#dictionary">Dictionary</a>
+                <span class="crumb"><span class="s"> » </span><a href="#dictionary_classes">Classes</a></span>
+                <span class="crumb"><span class="s"> » </span><a class="here">inherit-class-option-mixin</a></span>
+              </span>
+            </h1>
+
+            <article class="class definition">
+
+              <h1><span class="type">Class</span> <span class="name self">inheriting-readers:inherit-class-option-mixin</span></h1>
+
+              <p class="direct-superclasses"><code class="relevant"><a href="#dictionary_inherit-mixin">inheriting-readers:inherit-mixin</a></code>, <a href="https://www.hexstreamsoft.com/libraries/class-options/#dictionary_options-mixin" target="_blank">class-options:options-mixin</a>, <code class="relevant"><a href="#dictionary_class">inheriting-readers:class</a></code></p>
+
+              <section class="description">
+                <h1>Description</h1>
+                <p>TBW.</p>
+              </section>
+
+            </article>
+
+            <article class="method definition" id="dictionary_class-options:canonicalize-options_inherit-class-option-mixin">
+
+              <h1><span class="type">Method</span> <span class="name self">class-options:canonicalize-options</span></h1>
+
+              <p class="args-and-retvals">(<var>class</var> <code class="specializer relevant"><a href="#dictionary_inherit-class-option-mixin">inheriting-readers:inherit-class-option-mixin</a></code>) &amp;key <var>inherit</var> <var>direct-slots</var> =&gt; <var>canonicalized-options</var></p>
+
+              <section class="description">
+                <h1>Description</h1>
+                <p>TBW.</p>
+              </section>
+
+            </article>
+
+          </section>
+
+          <section id="dictionary_reader-method">
+
+            <h1 class="breadcrumbs-bar">
+              <span class="section-relative-nav">
+                <a href="#dictionary_reader-method" class="anchor">⚓</a>
+              </span>
+              <span class="breadcrumbs">
+                <a href="#dictionary">Dictionary</a>
+                <span class="crumb"><span class="s"> » </span><a href="#dictionary_classes">Classes</a></span>
+                <span class="crumb"><span class="s"> » </span><a class="here">reader-method</a></span>
+              </span>
+            </h1>
+
+            <article class="class definition">
+
+              <h1><span class="type">Class</span> <span class="name self">inheriting-readers:reader-method</span></h1>
+
+              <p class="direct-superclasses"><a href="https://clos-mop.hexstreamsoft.com/classes/#standard-reader-method" target="_blank">c2mop:standard-reader-method</a></p>
+
+              <section class="description">
+                <h1>Description</h1>
+                <p>TBW.</p>
+              </section>
+
+            </article>
+
+          </section>
+
+          <section id="dictionary_standard-reader-method">
+
+            <h1 class="breadcrumbs-bar">
+              <span class="section-relative-nav">
+                <a href="#dictionary_standard-reader-method" class="anchor">⚓</a>
+              </span>
+              <span class="breadcrumbs">
+                <a href="#dictionary">Dictionary</a>
+                <span class="crumb"><span class="s"> » </span><a href="#dictionary_classes">Classes</a></span>
+                <span class="crumb"><span class="s"> » </span><a class="here">standard-reader-method</a></span>
+              </span>
+            </h1>
+
+            <article class="class definition">
+
+              <h1><span class="type">Class</span> <span class="name self">inheriting-readers:standard-reader-method</span></h1>
+
+              <p class="direct-superclasses"><code class="relevant"><a href="#dictionary_reader-method">inheriting-readers:reader-method</a></code></p>
+
+              <section class="description">
+                <h1>Description</h1>
+                <p>TBW.</p>
+              </section>
+
+            </article>
+
+            <article class="method definition" id="dictionary_initialize-instance_around_standard-reader-method">
+
+              <h1><span class="type">Around-Method</span> <span class="name self">initialize-instance</span></h1>
+
+              <p class="args-and-retvals">(<var>method</var> <code class="specializer relevant"><a href="#dictionary_standard-reader-method">inheriting-readers:standard-reader-method</a></code>) &amp;rest <var>initargs</var> &amp;key <var>slot-definition</var></p>
+
+              <section class="description">
+                <h1>Description</h1>
+                <p>TBW.</p>
+              </section>
+
+            </article>
+
+          </section>
+
+          <section id="dictionary_compute-inheriting-method-initargs-overrides">
+
+            <h1 class="breadcrumbs-bar">
+              <span class="section-relative-nav">
+                <a href="#dictionary_compute-inheriting-method-initargs-overrides" class="anchor">⚓</a>
+              </span>
+              <span class="breadcrumbs">
+                <a href="#dictionary">Dictionary</a>
+                <span class="crumb"><span class="s"> » </span><a href="#dictionary_classes">Classes</a></span>
+                <span class="crumb"><span class="s"> » </span><a class="here">compute-inheriting-method-initargs-overrides</a></span>
+              </span>
+            </h1>
+
+            <article class="generic-function definition">
+
+              <h1><span class="type">Generic Function</span> <span class="name self">inheriting-readers:compute-inheriting-method-initargs-overrides</span></h1>
+
+              <p class="args-and-retvals"><var>class</var> <var>direct-slot</var> <var>inheritance-scheme</var> <var>method</var> &amp;rest <var>initargs</var> &amp;key &amp;allow-other-keys =&gt; <var>initargs-overrides</var></p>
+
+              <section class="arguments-and-values">
+                <h1>Arguments and Values</h1>
+                <ul>
+                  <li><var>class</var> -- A class.</li>
+                  <li><var>direct-slot</var> -- A direct slot.</li>
+                  <li><var>inheritance-scheme</var> -- An <code class="relevant"><a href="#dictionary_inheritance-scheme">inheriting-readers:inheritance-scheme</a></code>.</li>
+                  <li><var>method</var> -- A method.</li>
+                  <li><var>initargs</var> -- A plist.</li>
+                  <li><var>initargs-overrides</var> -- A fresh plist.</li>
+                </ul>
+              </section>
+
+              <section class="description">
+                <h1>Description</h1>
+                <p>TBW.</p>
+              </section>
+
+              <section class="methods">
+                <h1>Methods</h1>
+
+                <article class="method definition" id="dictionary_compute-inheriting-method-initargs-overrides_class_direct-slot-definition_standard-inheritance-scheme_reader-method">
+
+                  <h1><span class="type">Method</span> <span class="name self">inheriting-readers:compute-inheriting-method-initargs-overrides</span></h1>
+
+                  <p class="args-and-retvals">(<var>class</var> <code class="specializer relevant"><a href="#dictionary_class">inheriting-readers:class</a></code>) (<var>direct-slot</var> <span class="specializer"><a href="https://clos-mop.hexstreamsoft.com/classes/#direct-slot-definition" target="_blank">c2mop:direct-slot-definition</a></span>) (<var>inheritance-scheme</var> <code class="specializer relevant"><a href="#dictionary_standard-inheritance-scheme">inheriting-readers:standard-inheritance-scheme</a></code>) (<var>method</var> <code class="specializer relevant"><a href="#dictionary_reader-method">inheriting-readers:reader-method</a></code>) &amp;key =&gt; <var>initargs-overrides</var></p>
+
+                  <section class="description">
+                    <h1>Description</h1>
+                    <p>TBW.</p>
+                  </section>
+
+                </article>
+
+              </section>
+
+            </article>
+
+          </section>
+
+          <nav class="end-of-section-indicator">
+            <a href="#classes">
+              "<span>Classes</span>" end.
+            </a>
+          </nav>
+
+        </section>
+
+        <section id="dictionary_inheritance-schemes">
+
+          <h1 class="breadcrumbs-bar">
+            <span class="section-relative-nav">
+              <a href="#dictionary_inheritance-schemes" class="anchor">⚓</a>
+            </span>
+            <span class="breadcrumbs">
+              <a href="#dictionary">Dictionary</a>
+              <span class="crumb"><span class="s"> » </span><a class="here">Inheritance schemes</a></span>
+            </span>
+          </h1>
+
+          <nav class="tabs">
+            <ul>
+              <li><a href="#dictionary_inheritance-scheme"><span class="type">Class</span> <code>inheritance-scheme</code></a></li>
+              <li><a href="#dictionary_standard-inheritance-scheme"><span class="type">Class</span> <code>standard-inheritance-scheme</code></a></li>
+            </ul>
+            <ul>
+              <li><a href="#dictionary_parent-mixin"><span class="type">Class</span> <code>parent-mixin</code></a></li>
+              <li><a href="#dictionary_parent"><span class="type">Generic function</span> <code>parent</code></a></li>
+            </ul>
+            <ul>
+              <li><a href="#dictionary_parent-function-mixin"><span class="type">Class</span> <code>parent-function-mixin</code></a></li>
+              <li><a href="#dictionary_parent-function"><span class="type">Generic function</span> <code>parent-function</code></a></li>
+            </ul>
+            <ul>
+              <li><a href="#dictionary_nil-is-valid-parent-p-mixin"><span class="type">Class</span> <code>nil-is-valid-parent-p-mixin</code></a></li>
+              <li><a href="#dictionary_nil-is-valid-parent-p"><span class="type">Generic function</span> <code>nil-is-valid-parent-p</code></a></li>
+            </ul>
+            <ul>
+              <li><a href="#dictionary_inheritance-scheme-mixin"><span class="type">Class</span> <code>inheritance-scheme-mixin</code></a></li>
+              <li><a href="#dictionary_inheritance-scheme"><span class="type">Generic function</span> <code>inheritance-scheme</code></a></li>
+            </ul>
+            <ul>
+              <li><a href="#dictionary_inheritance-scheme-class"><span class="type">Generic function</span> <code>inheritance-scheme-class</code></a></li>
+              <li><a href="#dictionary_resolve-inheritance-scheme"><span class="type">Generic function</span> <code>resolve-inheritance-scheme</code></a></li>
+            </ul>
+            <ul>
+              <li><a href="#dictionary_inheritance-schemes-mixin"><span class="type">Class</span> <code>inheritance-schemes-mixin</code></a></li>
+              <li><a href="#dictionary_inheritance-schemes_inheritance-schemes"><span class="type">Generic function</span> <code>inheritance-schemes</code></a></li>
+              <li><a href="#dictionary_canonicalize-inheritance-schemes"><span class="type">Generic function</span> <code>canonicalize-inheritance-schemes</code></a></li>
+            </ul>
+          </nav>
+
+          <section id="dictionary_inheritance-scheme">
+
+            <h1 class="breadcrumbs-bar">
+              <span class="section-relative-nav">
+                <a href="#dictionary_inheritance-scheme" class="anchor">⚓</a>
+              </span>
+              <span class="breadcrumbs">
+                <a href="#dictionary">Dictionary</a>
+                <span class="crumb"><span class="s"> » </span><a href="#dictionary_inheritance-schemes">Inheritance schemes</a></span>
+                <span class="crumb"><span class="s"> » </span><a class="here">inheritance-scheme</a></span>
+              </span>
+            </h1>
+
+            <article class="class definition">
+
+              <h1><span class="type">Class</span> <span class="name self">inheriting-readers:inheritance-scheme</span></h1>
+
+              <section class="description">
+                <h1>Description</h1>
+                <p>TBW.</p>
+              </section>
+
+            </article>
+
+            <article class="generic-function reader definition">
+
+              <h1><span class="type">Generic Function</span> <span class="name self">inheriting-readers:inheritance-scheme</span></h1>
+
+              <p class="args-and-retvals"><var>object</var> =&gt; <var>inheritance-scheme</var></p>
+
+              <section class="description">
+                <h1>Description</h1>
+                <p>Returns the <var>inheritance-scheme</var> associated with the object.</p>
+              </section>
+
+            </article>
+
+          </section>
+
+          <section id="dictionary_standard-inheritance-scheme">
+
+            <h1 class="breadcrumbs-bar">
+              <span class="section-relative-nav">
+                <a href="#dictionary_standard-inheritance-scheme" class="anchor">⚓</a>
+              </span>
+              <span class="breadcrumbs">
+                <a href="#dictionary">Dictionary</a>
+                <span class="crumb"><span class="s"> » </span><a href="#dictionary_inheritance-schemes">Inheritance schemes</a></span>
+                <span class="crumb"><span class="s"> » </span><a class="here">standard-inheritance-scheme</a></span>
+              </span>
+            </h1>
+
+            <article class="class definition">
+
+              <h1><span class="type">Class</span> <span class="name self">inheriting-readers:standard-inheritance-scheme</span></h1>
+
+              <p class="direct-superclasses"><code class="relevant"><a href="#dictionary_parent-function-mixin">inheriting-readers:parent-function-mixin</a></code>, <code class="relevant"><a href="#dictionary_nil-is-valid-parent-p-mixin">inheriting-readers:nil-is-valid-parent-p-mixin</a></code>, <code class="relevant"><a href="#dictionary_inheritance-scheme">inheriting-readers:inheritance-scheme</a></code></p>
+
+              <section class="description">
+                <h1>Description</h1>
+                <p>TBW.</p>
+              </section>
+
+            </article>
+
+          </section>
+
+          <section id="dictionary_parent-mixin">
+
+            <h1 class="breadcrumbs-bar">
+              <span class="section-relative-nav">
+                <a href="#dictionary_parent-mixin" class="anchor">⚓</a>
+              </span>
+              <span class="breadcrumbs">
+                <a href="#dictionary">Dictionary</a>
+                <span class="crumb"><span class="s"> » </span><a href="#dictionary_inheritance-schemes">Inheritance schemes</a></span>
+                <span class="crumb"><span class="s"> » </span><a class="here">parent-mixin</a></span>
+              </span>
+            </h1>
+
+            <article class="class definition">
+
+              <h1><span class="type">Class</span> <span class="name self">inheriting-readers:parent-mixin</span></h1>
+
+              <section class="description">
+                <h1>Description</h1>
+                <p>Slots:</p>
+                <pre><code>((<var>inherit</var> :initarg :parent
+          :reader <code class="relevant"><a href="#dictionary_parent">inheriting-readers:parent</a></code>
+          :initform nil))</code></pre>
+              </section>
+
+            </article>
+
+          </section>
+
+          <section id="dictionary_parent">
+
+            <h1 class="breadcrumbs-bar">
+              <span class="section-relative-nav">
+                <a href="#dictionary_parent" class="anchor">⚓</a>
+              </span>
+              <span class="breadcrumbs">
+                <a href="#dictionary">Dictionary</a>
+                <span class="crumb"><span class="s"> » </span><a href="#dictionary_inheritance-schemes">Inheritance schemes</a></span>
+                <span class="crumb"><span class="s"> » </span><a class="here">parent</a></span>
+              </span>
+            </h1>
+
+            <article class="generic-function reader definition">
+
+              <h1><span class="type">Generic Function</span> <span class="name self">inheriting-readers:parent</span></h1>
+
+              <p class="args-and-retvals"><var>object</var> =&gt; <var>parent</var></p>
+
+              <section class="description">
+                <h1>Description</h1>
+                <p>Returns the <var>object</var>'s <var>parent</var>.</p>
+                <p>An object could have multiple parents for various purposes, but this is a good default.</p>
+              </section>
+
+            </article>
+
+          </section>
+
+          <section id="dictionary_parent-function-mixin">
+
+            <h1 class="breadcrumbs-bar">
+              <span class="section-relative-nav">
+                <a href="#dictionary_parent-function-mixin" class="anchor">⚓</a>
+              </span>
+              <span class="breadcrumbs">
+                <a href="#dictionary">Dictionary</a>
+                <span class="crumb"><span class="s"> » </span><a href="#dictionary_inheritance-schemes">Inheritance schemes</a></span>
+                <span class="crumb"><span class="s"> » </span><a class="here">parent-function-mixin</a></span>
+              </span>
+            </h1>
+
+            <article class="class definition">
+
+              <h1><span class="type">Class</span> <span class="name self">inheriting-readers:parent-function-mixin</span></h1>
+
+              <section class="description">
+                <h1>Description</h1>
+                <p>Slots:</p>
+                <pre><code>((<var>parent-function</var> :initarg :parent-function
+                  :reader <code class="relevant"><a href="#dictionary_inherit">inheriting-readers:parent-function</a></code>
+                  :type (or function symbol)
+                  :initform #'inheriting-readers:parent))</code></pre>
+              </section>
+
+            </article>
+
+            <article class="method definition" id="dictionary_shared-initialize_parent-function-mixin_t">
+
+              <h1><span class="type">Around-Method</span> <span class="name self">shared-initialize</span></h1>
+
+              <p class="args-and-retvals">(<var>mixin</var> <code class="specializer relevant"><a href="#dictionary_parent-function-mixin">inheriting-readers:parent-function-mixin</a></code>) <var>slot-names</var> &amp;rest <var>initargs</var> &amp;key <var>parent-function</var> =&gt; <var>instance</var></p>
+
+              <section class="description">
+                <h1>Description</h1>
+                <p>TBW.</p>
+              </section>
+
+            </article>
+
+          </section>
+
+          <section id="dictionary_parent-function">
+
+            <h1 class="breadcrumbs-bar">
+              <span class="section-relative-nav">
+                <a href="#dictionary_parent-function" class="anchor">⚓</a>
+              </span>
+              <span class="breadcrumbs">
+                <a href="#dictionary">Dictionary</a>
+                <span class="crumb"><span class="s"> » </span><a href="#dictionary_inheritance-schemes">Inheritance schemes</a></span>
+                <span class="crumb"><span class="s"> » </span><a class="here">parent-function</a></span>
+              </span>
+            </h1>
+
+            <article class="generic-function reader definition">
+
+              <h1><span class="type">Generic Function</span> <span class="name self">inheriting-readers:parent-function</span></h1>
+
+              <p class="args-and-retvals"><var>object</var> =&gt; <var>parent-function</var></p>
+
+              <section class="description">
+                <h1>Description</h1>
+                <p>Returns the <var>parent-function</var> to call to retrieve the parent.</p>
+              </section>
+
+            </article>
+
+          </section>
+
+          <section id="dictionary_nil-is-valid-parent-p-mixin">
+
+            <h1 class="breadcrumbs-bar">
+              <span class="section-relative-nav">
+                <a href="#dictionary_nil-is-valid-parent-p-mixin" class="anchor">⚓</a>
+              </span>
+              <span class="breadcrumbs">
+                <a href="#dictionary">Dictionary</a>
+                <span class="crumb"><span class="s"> » </span><a href="#dictionary_inheritance-schemes">Inheritance schemes</a></span>
+                <span class="crumb"><span class="s"> » </span><a class="here">nil-is-valid-parent-p-mixin</a></span>
+              </span>
+            </h1>
+
+            <article class="class definition">
+
+              <h1><span class="type">Class</span> <span class="name self">inheriting-readers:nil-is-valid-parent-p-mixin</span></h1>
+
+              <section class="description">
+                <h1>Description</h1>
+                <p>Slots:</p>
+                <pre><code>((<var>nil-is-valid-parent-p</var> :initarg :nil-is-valid-parent-p
+                        :reader <code class="relevant"><a href="#dictionary_inherit">inheriting-readers:nil-is-valid-parent-p</a></code>
+                        :type boolean
+                        :initform nil))</code></pre>
+              </section>
+
+            </article>
+
+          </section>
+
+          <section id="dictionary_nil-is-valid-parent-p">
+
+            <h1 class="breadcrumbs-bar">
+              <span class="section-relative-nav">
+                <a href="#dictionary_nil-is-valid-parent-p" class="anchor">⚓</a>
+              </span>
+              <span class="breadcrumbs">
+                <a href="#dictionary">Dictionary</a>
+                <span class="crumb"><span class="s"> » </span><a href="#dictionary_inheritance-schemes">Inheritance schemes</a></span>
+                <span class="crumb"><span class="s"> » </span><a class="here">nil-is-valid-parent-p</a></span>
+              </span>
+            </h1>
+
+            <article class="generic-function reader definition">
+
+              <h1><span class="type">Generic Function</span> <span class="name self">inheriting-readers:nil-is-valid-parent-p</span></h1>
+
+              <p class="args-and-retvals"><var>object</var> =&gt; <var>nil-is-valid-parent-p</var></p>
+
+              <section class="description">
+                <h1>Description</h1>
+                <p>Indicates whether or not <code>nil</code> is a valid parent.</p>
+              </section>
+
+            </article>
+
+          </section>
+
+          <section id="dictionary_inheritance-scheme-mixin">
+
+            <h1 class="breadcrumbs-bar">
+              <span class="section-relative-nav">
+                <a href="#dictionary_inheritance-scheme-mixin" class="anchor">⚓</a>
+              </span>
+              <span class="breadcrumbs">
+                <a href="#dictionary">Dictionary</a>
+                <span class="crumb"><span class="s"> » </span><a href="#dictionary_inheritance-schemes">Inheritance schemes</a></span>
+                <span class="crumb"><span class="s"> » </span><a class="here">inheritance-scheme-mixin</a></span>
+              </span>
+            </h1>
+
+            <article class="class definition">
+
+              <h1><span class="type">Class</span> <span class="name self">inheriting-readers:inheritance-scheme-mixin</span></h1>
+
+              <section class="description">
+                <h1>Description</h1>
+                <p>Slots:</p>
+                <pre><code>((<var>inheritance-scheme</var> :initarg :inheritance-scheme
+                     :reader <code class="relevant"><a href="#dictionary_inheritance-scheme">inheriting-readers:inheritance-scheme</a></code>
+                     :type <code class="relevant"><a href="#dictionary_inheritance-scheme">inheriting-readers:inheritance-scheme</a></code>))</code></pre>
+              </section>
+
+            </article>
+
+          </section>
+
+          <section id="dictionary_inheritance-scheme-class">
+
+            <h1 class="breadcrumbs-bar">
+              <span class="section-relative-nav">
+                <a href="#dictionary_inheritance-scheme-class" class="anchor">⚓</a>
+              </span>
+              <span class="breadcrumbs">
+                <a href="#dictionary">Dictionary</a>
+                <span class="crumb"><span class="s"> » </span><a href="#dictionary_inheritance-schemes">Inheritance schemes</a></span>
+                <span class="crumb"><span class="s"> » </span><a class="here">inheritance-scheme-class</a></span>
+              </span>
+            </h1>
+
+            <article class="generic-function definition">
+
+              <h1><span class="type">Generic Function</span> <span class="name self">inheriting-readers:inheritance-scheme-class</span></h1>
+
+              <p class="args-and-retvals"><var>class</var> &amp;rest <var>initargs</var> &amp;key &amp;allow-other-keys =&gt; <var>inheritance-scheme-class</var></p>
+
+              <section class="arguments-and-values">
+                <h1>Arguments and Values</h1>
+                <ul>
+                  <li><var>class</var> -- A class.</li>
+                  <li><var>initargs</var> -- A plist.</li>
+                  <li><var>inheritance-scheme-class</var> -- A subclass of <code class="relevant"><a href="#dictionary_inheritance-scheme">inheriting-readers:inheritance-scheme</a></code>.</li>
+                </ul>
+              </section>
+
+              <section class="description">
+                <h1>Description</h1>
+                <p>TBW.</p>
+              </section>
+
+              <section class="methods">
+                <h1>Methods</h1>
+
+                <article class="method definition" id="dictionary_inheritance-scheme-class_cl:class">
+
+                  <h1><span class="type">Method</span> <span class="name self">inheriting-readers:inheritance-scheme-class</span></h1>
+
+                  <p class="args-and-retvals">(<var>class</var> <code class="specializer"><a href="http://www.lispworks.com/documentation/HyperSpec/Body/t_class.htm#class" target="_blank">cl:class</a></code>) &amp;key =&gt; <var>inheritance-scheme-class</var></p>
+
+                  <section class="description">
+                    <h1>Description</h1>
+                    <p>Returns the class <code class="relevant"><a href="#dictionary_standard-inheritance-scheme">inheriting-readers:standard-inheritance-scheme</a></code>.</p>
+                  </section>
+
+                </article>
+
+              </section>
+
+            </article>
+
+          </section>
+
+          <section id="dictionary_resolve-inheritance-scheme">
+
+            <h1 class="breadcrumbs-bar">
+              <span class="section-relative-nav">
+                <a href="#dictionary_resolve-inheritance-scheme" class="anchor">⚓</a>
+              </span>
+              <span class="breadcrumbs">
+                <a href="#dictionary">Dictionary</a>
+                <span class="crumb"><span class="s"> » </span><a href="#dictionary_inheritance-schemes">Inheritance schemes</a></span>
+                <span class="crumb"><span class="s"> » </span><a class="here">resolve-inheritance-scheme</a></span>
+              </span>
+            </h1>
+
+            <article class="generic-function definition">
+
+              <h1><span class="type">Generic Function</span> <span class="name self">inheriting-readers:resolve-inheritance-scheme</span></h1>
+
+              <p class="args-and-retvals"><var>class</var> <var>inheritance-scheme-specification</var> &amp;key =&gt; <var>inheritance-scheme</var></p>
+
+              <section class="arguments-and-values">
+                <h1>Arguments and Values</h1>
+                <ul>
+                  <li><var>class</var> -- A class.</li>
+                  <li><var>inheritance-scheme-specification</var> -- An inheritance scheme specification.</li>
+                  <li><var>inheritance-scheme</var> -- An <code class="relevant"><a href="#dictionary_inheritance-scheme">inheriting-readers:inheritance-scheme</a></code>.</li>
+                </ul>
+              </section>
+
+              <section class="description">
+                <h1>Description</h1>
+                <p>TBW.</p>
+              </section>
+
+              <section class="methods">
+                <h1>Methods</h1>
+
+                <article class="method definition" id="dictionary_resolve-inheritance-scheme_t_t">
+
+                  <h1><span class="type">Around-Method</span> <span class="name self">inheriting-readers:resolve-inheritance-scheme</span></h1>
+
+                  <p class="args-and-retvals"><var>class</var> <var>inheritance-scheme-specification</var> &amp;key (<var>errorp</var> t) =&gt; <var>inheritance-scheme</var></p>
+
+                  <section class="description">
+                    <h1>Description</h1>
+                    <p>Call the next method. Return its result if it's not <code>nil</code>, else signal an error if <var>errorp</var> is true, else return <code>nil</code>.</p>
+                  </section>
+
+                </article>
+
+                <article class="method definition" id="dictionary_resolve-inheritance-scheme_t_t">
+
+                  <h1><span class="type">Method</span> <span class="name self">inheriting-readers:resolve-inheritance-scheme</span></h1>
+
+                  <p class="args-and-retvals">(<var>class</var> <code class="specializer"><a href="http://www.lispworks.com/documentation/HyperSpec/Body/t_class.htm#class" target="_blank">cl:class</a></code>) (<var>inheritance-scheme-specification</var> cons) &amp;key =&gt; <var>inheritance-scheme</var></p>
+
+                  <section class="description">
+                    <h1>Description</h1>
+                    <p>Calls <code>(apply #'make-instance (inheriting-readers:inheritance-scheme-class <var>class</var>) <var>initargs</var>)</code>.</p>
+                  </section>
+
+                </article>
+
+                <article class="method definition" id="dictionary_resolve-inheritance-scheme_t_inheritance-scheme">
+
+                  <h1><span class="type">Method</span> <span class="name self">inheriting-readers:resolve-inheritance-scheme</span></h1>
+
+                  <p class="args-and-retvals"><var>object</var> (<var>inheritance-scheme</var> <code class="specializer relevant"><a href="#dictionary_inheritance-scheme">inheriting-readers:inheritance-scheme</a></code>) &amp;key =&gt; <var>inheritance-scheme</var></p>
+
+                  <section class="description">
+                    <h1>Description</h1>
+                    <p>Returns the supplied <var>inheritance-scheme</var>.</p>
+                  </section>
+
+                </article>
+
+                <article class="method definition" id="dictionary_resolve-inheritance-scheme_inheritance-schemes-mixin_symbol">
+
+                  <h1><span class="type">Method</span> <span class="name self">inheriting-readers:resolve-inheritance-scheme</span></h1>
+
+                  <p class="args-and-retvals">(<var>mixin</var> <code class="specializer relevant"><a href="#dictionary_inheritance-schemes-mixin">inheriting-readers:inheritance-schemes-mixin</a></code>) (<var>object</var> symbol) &amp;key =&gt; <var>inheritance-scheme</var></p>
+
+                  <section class="description">
+                    <h1>Description</h1>
+                    <p>Returns the <var>inheritance-scheme</var> bound to <var>name</var> in <code>(inheriting-readers:inheritance-schemes <var>mixin</var>)</code>, if there is one, else calls the next method.</p>
+                  </section>
+
+                </article>
+
+                <article class="method definition" id="dictionary_resolve-inheritance-scheme_standard-metaclass_symbol">
+
+                  <h1><span class="type">Method</span> <span class="name self">inheriting-readers:resolve-inheritance-scheme</span></h1>
+
+                  <p class="args-and-retvals">(<var>mixin</var> <code class="specializer relevant"><a href="#dictionary_standard-metaclass">inheriting-readers:standard-metaclass</a></code>) (<var>name</var> symbol) &amp;rest <var>rest</var> =&gt; <var>inheritance-scheme</var></p>
+
+                  <section class="description">
+                    <h1>Description</h1>
+                    <p>Call the next method and return that result if it's not <code>nil</code>.</p>
+                    <p>Else, try to find the class named <var>name</var>, and if there is one then return the result of <code>(apply #'inheriting-readers:resolve-inheritance-scheme class t :errorp nil rest)</code>, else return <code>nil</code>.</p>
+                  </section>
+
+                </article>
+
+                <article class="method definition" id="dictionary_resolve-inheritance-scheme_class_t">
+
+                  <h1><span class="type">Method</span> <span class="name self">inheriting-readers:resolve-inheritance-scheme</span></h1>
+
+                  <p class="args-and-retvals">(<var>class</var> <code class="specializer relevant"><a href="#dictionary_class">inheriting-readers:class</a></code>) <var>inheritance-scheme-specification</var> &amp;rest <var>rest</var> =&gt; <var>inheritance-scheme</var></p>
+
+                  <section class="description">
+                    <h1>Description</h1>
+                    <p>Call <code>(apply #'inheriting-readers:resolve-inheritance-scheme (class-of class) inheritance-scheme-specification :errorp nil rest)</code>.</p>
+                  </section>
+
+                </article>
+
+              </section>
+
+            </article>
+
+          </section>
+
+          <section id="dictionary_inheritance-schemes-mixin">
+
+            <h1 class="breadcrumbs-bar">
+              <span class="section-relative-nav">
+                <a href="#dictionary_inheritance-schemes-mixin" class="anchor">⚓</a>
+              </span>
+              <span class="breadcrumbs">
+                <a href="#dictionary">Dictionary</a>
+                <span class="crumb"><span class="s"> » </span><a href="#dictionary_inheritance-schemes">Inheritance schemes</a></span>
+                <span class="crumb"><span class="s"> » </span><a class="here">inheritance-schemes-mixin</a></span>
+              </span>
+            </h1>
+
+            <article class="class definition">
+
+              <h1><span class="type">Class</span> <span class="name self">inheriting-readers:inheritance-schemes-mixin</span></h1>
+
+              <section class="description">
+                <h1>Description</h1>
+                <p>Slots:</p>
+                <pre><code>((<var>inheritance-schemes</var> :reader <code class="relevant"><a href="#dictionary_inheritance-schemes">inheriting-readers:inheritance-schemes</a></code>
+                      :initform nil))</code></pre>
+              </section>
+
+            </article>
+
+            <article class="method definition" id="dictionary_initialize-instance_before_inheritance-schemes-mixin">
+
+              <h1><span class="type">Before-Method</span> <span class="name self">initialize-instance</span></h1>
+
+              <p class="args-and-retvals">(<var>mixin</var> <code class="specializer relevant"><a href="#dictionary_inheritance-schemes-mixin">inheriting-readers:inheritance-schemes-mixin</a></code>) &amp;key <var>inheritance-schemes</var></p>
+
+              <section class="description">
+                <h1>Description</h1>
+                <p>Sets the value of the <var>inheritance-schemes</var> slot to the value of <code>(inheriting-readers:canonicalize-inheritance-schemes <var>mixin</var> <var>inheritance-schemes</var>)</code>.</p>
+              </section>
+
+            </article>
+
+            <article class="method definition" id="dictionary_reinitialize-instance_before_inheritance-schemes-mixin">
+
+              <h1><span class="type">Before-Method</span> <span class="name self">reinitialize-instance</span></h1>
+
+              <p class="args-and-retvals">(<var>mixin</var> <code class="specializer relevant"><a href="#dictionary_inheritance-schemes-mixin">inheriting-readers:inheritance-schemes-mixin</a></code>) &amp;key <var>inheritance-schemes</var></p>
+
+              <section class="description">
+                <h1>Description</h1>
+                <p>If <var>inheritance-schemes</var> was supplied, then set the value of the <var>inheritance-schemes</var> slot to <code>nil</code> (to make sure previous local inheritance schemes don't participate in inheritance scheme resolution while canonicalizing inheritance schemes this time around) and execute the same code as the above method.</p>
+              </section>
+
+            </article>
+
+          </section>
+
+          <section id="dictionary_inheritance-schemes_inheritance-schemes">
+
+            <h1 class="breadcrumbs-bar">
+              <span class="section-relative-nav">
+                <a href="#dictionary_inheritance-schemes_inheritance-schemes" class="anchor">⚓</a>
+              </span>
+              <span class="breadcrumbs">
+                <a href="#dictionary">Dictionary</a>
+                <span class="crumb"><span class="s"> » </span><a href="#dictionary_inheritance-schemes">Inheritance schemes</a></span>
+                <span class="crumb"><span class="s"> » </span><a class="here">inheritance-schemes</a></span>
+              </span>
+            </h1>
+
+            <article class="generic-function reader definition">
+
+              <h1><span class="type">Generic Function</span> <span class="name self">inheriting-readers:inheritance-schemes</span></h1>
+
+              <p class="args-and-retvals"><var>class</var> =&gt; <var>inheritance-schemes</var></p>
+
+              <section class="description">
+                <h1>Description</h1>
+                <p>Returns the local <var>inheritance-schemes</var> associated with the <var>class</var>.</p>
+              </section>
+
+            </article>
+
+          </section>
+
+          <section id="dictionary_canonicalize-inheritance-schemes">
+
+            <h1 class="breadcrumbs-bar">
+              <span class="section-relative-nav">
+                <a href="#dictionary_canonicalize-inheritance-schemes" class="anchor">⚓</a>
+              </span>
+              <span class="breadcrumbs">
+                <a href="#dictionary">Dictionary</a>
+                <span class="crumb"><span class="s"> » </span><a href="#dictionary_inheritance-schemes">Inheritance schemes</a></span>
+                <span class="crumb"><span class="s"> » </span><a class="here">canonicalize-inheritance-schemes</a></span>
+              </span>
+            </h1>
+
+            <article class="generic-function definition">
+
+              <h1><span class="type">Generic Function</span> <span class="name self">inheriting-readers:canonicalize-inheritance-schemes</span></h1>
+
+              <p class="args-and-retvals"><var>class</var> <var>inheritance-scheme-specifications</var> &amp;key =&gt; <var>canonicalized-inheritance-schemes</var></p>
+
+              <section class="arguments-and-values">
+                <h1>Arguments and Values</h1>
+                <ul>
+                  <li><var>class</var> -- A class.</li>
+                  <li><var>inheritance-scheme-specifications</var> -- A plist. Each entry associates a name to an inheritance scheme specification.</li>
+                  <li><var>canonicalized-inheritance-schemes</var> -- A plist. Each entry associates a name to an <code class="relevant"><a href="#dictionary_inheritance-scheme">inheriting-readers:inheritance-scheme</a></code>.</li>
+                </ul>
+              </section>
+
+              <section class="description">
+                <h1>Description</h1>
+                <p>TBW.</p>
+              </section>
+
+              <section class="methods">
+                <h1>Methods</h1>
+
+                <article class="method definition" id="dictionary_canonicalize-inheritance-schemes_inheritance-schemes-mixin_list">
+
+                  <h1><span class="type">Method</span> <span class="name self">inheriting-readers:canonicalize-inheritance-schemes</span></h1>
+
+                  <p class="args-and-retvals">(<var>mixin</var> <code class="specializer relevant"><a href="#dictionary_inheritance-schemes-mixin">inheriting-readers:inheritance-schemes-mixin</a></code>) (<var>inheritance-scheme-specifications</var> list) =&gt; <var>canonicalized-inheritance-schemes</var></p>
+
+                  <section class="description">
+                    <h1>Description</h1>
+                    <p>Returns a fresh plist in which each <var>inheritance-scheme-specification</var> in <var>inheritance-scheme-specifications</var> has been resolved to an <code class="relevant"><a href="#dictionary_inheritance-scheme">inheriting-readers:inheritance-scheme</a></code> with <code>(inheriting-readers:resolve-inheritance-scheme <var>mixin</var> <var>inheritance-scheme-specification</var>)</code>.</p>
+                  </section>
+
+                </article>
+
+              </section>
+
+            </article>
+
+          </section>
+
+          <nav class="end-of-section-indicator">
+            <a href="#inheritance-schemes">
+              "<span>Inheritance schemes</span>" end.
+            </a>
+          </nav>
+
+        </section>
+
+        <nav class="end-of-section-indicator">
+          <a href="#dictionary">
+            "<span>Dictionary</span>" end.
+          </a>
+        </nav>
+
+      </section>
+
+    </main>
+
+    <footer id="footer">
+      <div class="back-to-top left">
+        <a href="#">⬆</a>
+      </div>
+      <div class="main">
+        <a href="https://validator.w3.org/check?uri=http%3A%2F%2Fwww.hexstreamsoft.com%2Flibraries%2Finheriting-readers%2F">✔ HTML5</a>
+        <a href="https://www.hexstreamsoft.com/README">✔ Public Domain</a>
+        <a href="https://jigsaw.w3.org/css-validator/validator?uri=http%3A%2F%2Fwww.hexstreamsoft.com%2Flibraries%2Finheriting-readers%2F">✔ CSS3</a>
+        <a>✔ Mobile-friendly</a>
+      </div>
+      <div class="back-to-top right">
+        <a href="#">⬆</a>
+      </div>
+    </footer>
+
+  </body>
+</html>
