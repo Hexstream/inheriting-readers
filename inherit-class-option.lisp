@@ -24,7 +24,7 @@
         (rest (call-next-method)))
     (if (and inherit direct-slots)
         (list* :direct-slots (mapcar (lambda (slot)
-                                       (if (get-properties '(:inherit) slot)
+                                       (if (get-properties slot '(:inherit))
                                            slot
                                            (list* :inherit inherit slot)))
                                      direct-slots)
